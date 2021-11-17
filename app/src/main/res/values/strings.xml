@@ -31,4 +31,8 @@
     <string name="go">Go</string>
     <string name="ex">Che fai</string>
     <string name="errore">Seleziona almeno un paese ed un argomento</string>
+
+    <string name="news">Notizie</string>
+    <string name="topic_news">Notizie d\'interesse</string>
+    <string name="favourites">Preferiti</string>
 </resources>

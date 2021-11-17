@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonGo.setOnClickListener(view -> {
             mGoButtonCont++;
             if(isCountrySelected() && isTopicSelected()) {
-                Log.d(TAG, "One country and at leasto one topic choosen");
+                Log.d(TAG, "One country and at least one topic choosen");
 
                 if(mGoButtonCont > 3) {
                     mNews.setTitle("The button has been pressed " + mGoButtonCont + " times");
