@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import com.google.android.material.snackbar.Snackbar;
 
 import it.unimib.newsdalmondo.R;
+import it.unimib.newsdalmondo.model.News;
 import it.unimib.newsdalmondo.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox mCheckboxScience;
     private CheckBox mCheckboxSport;
     private CheckBox mCheckboxTech;
+    private News mNews = new News();
 
     private int goButtonCont = 0;
 
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(this, NewsActivity.class);
                 intent.putExtra(BUTTON_PRESSED_COUNTER_KEY, goButtonCont);
-                intent.putExtra(NEWS_KEY )
+                
 
 
             } else {
