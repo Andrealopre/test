@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">NewsDalMondo</string>
+
+    <string name="title">Seleziona il Paese</string>
+
+    <string-array name="country_selector">
+        <item>Italia</item>
+        <item>Germania</item>
+        <item>Francia</item>
+        <item>Spagna</item>
+        <item>USA</item>
+    </string-array>
+
+    <string name="topic">Area d\'interesse</string>
+
+    <string name="business">Finanza</string>
+    <string name="entertainment">Intrattenimento</string>
+    <string name="general">Generale</string>
+    <string name="healt">Salute</string>
+    <string name="science">Scienza</string>
+    <string name="sports">Sport</string>
+    <string name="technology">Technologia</string>
+
+    <string name="go">Go</string>
+    <string name="ex">Che fai</string>
+    <string name="errore">Seleziona almeno un paese ed un argomento</string>
+</resources>
