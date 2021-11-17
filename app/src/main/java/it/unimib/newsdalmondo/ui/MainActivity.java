@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(BUTTON_PRESSED_COUNTER_KEY, mGoButtonCont);
                 intent.putExtra(NEWS_KEY, mNews);
                 startActivity(intent);
-
+                ////Sgsgdhsgdshghgds
 
             } else {
                 //Oppure si usa una snackbar per mandare il messaggio di errore all'utente
