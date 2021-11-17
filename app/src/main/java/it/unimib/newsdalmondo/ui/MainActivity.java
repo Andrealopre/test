@@ -1,9 +1,10 @@
-package it.unimib.newsdalmondo;
+package it.unimib.newsdalmondo.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -17,12 +18,13 @@ import android.widget.Spinner;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import it.unimib.newsdalmondo.R;
 import it.unimib.newsdalmondo.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final String BUTTON_PRESSED_COUNTER_KEY = "ButtonPressedCounterKey";
+    private static final String BUTTON_PRESSED_COUNTER_KEY = "goButtonContKey";
     private static final String NEWS_KEY = "NewsKey";
 
     //La m è una convenzione per le variabili private
@@ -68,11 +70,19 @@ public class MainActivity extends AppCompatActivity {
         mCheckboxSport = findViewById(R.id.check_sport);
         mCheckboxTech = findViewById(R.id.check_tech);
 
+
         //Inizio sezione button go
         mButtonGo.setOnClickListener(view -> {
             goButtonCont++;
             if(isCountrySelected() && isTopicSelected()) {
+                Log.d(TAG, "One country and at leasto one topic choosen");
                 saveInformation();
+
+                Intent intent = new Intent(this, NewsActivity.class);
+                intent.putExtra(BUTTON_PRESSED_COUNTER_KEY, goButtonCont);
+                intent.putExtra(NEWS_KEY )
+
+
             } else {
                 //Oppure si usa una snackbar per mandare il messaggio di errore all'utente
                 Snackbar.make(mButtonGo, R.string.errore, Snackbar.LENGTH_SHORT).show();
