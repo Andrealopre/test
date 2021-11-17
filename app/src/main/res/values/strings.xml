@@ -2,6 +2,13 @@
     <string name="app_name">NewsDalMondo</string>
 
     <string name="title">Seleziona il Paese</string>
+    <string name="country">Paese d\'interesse</string>
+
+    <string name="france">Francia</string>
+    <string name="germany">Germania</string>
+    <string name="italy">Italia</string>
+    <string name="spain">Spagna</string>
+    <string name="united_states">Stati Uniti</string>
 
     <string-array name="country_selector">
         <item>Italia</item>

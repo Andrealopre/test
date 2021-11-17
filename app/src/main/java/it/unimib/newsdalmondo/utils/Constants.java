@@ -19,6 +19,4 @@ public class Constants {
     public static final String SHARED_PREFERENCES_FILE_NAME = "it.unimib.newsdalmondo.references";
     public static final String SHARED_PREFERENCES_COUNTRY = "COUNTRY_OF_INTEREST";
     public static final String SHARED_PREFERENES_TOPIC = "TOPIC_OF_INTEREST";
-
-
 }
