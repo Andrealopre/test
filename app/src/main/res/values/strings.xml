@@ -35,4 +35,6 @@
     <string name="news">Notizie</string>
     <string name="topic_news">Notizie d\'interesse</string>
     <string name="favourites">Preferiti</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

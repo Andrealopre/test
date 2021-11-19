@@ -11,10 +11,12 @@ import it.unimib.newsdalmondo.utils.Constants;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 
 public class NewsActivity extends AppCompatActivity {
 
     private static final String TAG = "NewsActivity";
+    private Menu mNewsMenu;
 
 
     //Metodi
@@ -34,5 +36,7 @@ public class NewsActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: " + counter);
         Log.d(TAG, "onCreate: " + news);
+
+        mNewsMenu = findViewById(R.id.menu_notizie);
     }
 }
