@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_navigation_graph"
-    app:startDestination="@id/countryNewsFragment">
+    app:startDestination="@id/menu_notizie">
 
     <fragment
-        android:id="@+id/countryNewsFragment"
+        android:id="@+id/menu_notizie"
         android:name="it.unimib.newsdalmondo.CountryNewsFragment"
-        android:label="fragment_country_news"
+        android:label="@string/news"
         tools:layout="@layout/fragment_country_news" />
     <fragment
-        android:id="@+id/topicNewsFragment"
+        android:id="@+id/menu_interesse"
         android:name="it.unimib.newsdalmondo.TopicNewsFragment"
-        android:label="fragment_topic_news"
+        android:label="@string/topic"
         tools:layout="@layout/fragment_topic_news" />
     <fragment
-        android:id="@+id/favouritesNewsFragment"
+        android:id="@+id/menu_preferiti"
         android:name="it.unimib.newsdalmondo.FavouritesNewsFragment"
-        android:label="fragment_favourites_news"
+        android:label="@string/favourites"
         tools:layout="@layout/fragment_favourites_news" />
 </navigation>

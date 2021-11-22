@@ -2,57 +2,48 @@ package it.unimib.newsdalmondo;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FavouritesNewsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class FavouritesNewsFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FavouritesNewsFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FavouritesNewsFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FavouritesNewsFragment newInstance(String param1, String param2) {
-        FavouritesNewsFragment fragment = new FavouritesNewsFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private static final String TAG = "FavouritesNewsFragment";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+        //Questo fragment ha un suo menu
+        setHasOptionsMenu(true);
+
+    }
+
+    //Crea il menu
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+
+        inflater.inflate(R.menu.favorite_menu, menu);
+
+    }
+
+    //Intercetta il click del menu
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.delete_all) {
+            Log.d(TAG, "onOptionsItemSelected: " + item);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
